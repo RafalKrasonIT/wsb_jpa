@@ -32,7 +32,7 @@ public class PatientEntity {
 
 
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "address_id") // Ta nazwa powinna odpowiadać kolumnie w tabeli bazy danych
+	@JoinColumn(name = "address_id") //
 	private AddressEntity address;
 
 	@OneToMany(mappedBy = "patient", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

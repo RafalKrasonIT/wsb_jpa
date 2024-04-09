@@ -20,17 +20,17 @@ public class VisitEntity {
 	private LocalDateTime time;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "doctor_id") // Nazwa kolumny klucza obcego w bazie danych
+	@JoinColumn(name = "doctor_id")
 	private DoctorEntity doctor;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "patient_id") // Nazwa kolumny klucza obcego w bazie danych
+	@JoinColumn(name = "patient_id")
 	private PatientEntity patient;
 
 	@OneToMany(mappedBy = "visit", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<MedicalTreatmentEntity> medicalTreatments;
 
-	// Getters and setters dla nowych relacji
+	// Getery i setery dla nowych relacji
 	public DoctorEntity getDoctor() {
 		return doctor;
 	}

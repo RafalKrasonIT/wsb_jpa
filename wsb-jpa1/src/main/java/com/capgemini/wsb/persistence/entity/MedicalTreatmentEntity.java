@@ -19,7 +19,7 @@ public class MedicalTreatmentEntity {
 	private TreatmentType type;
 
 	@ManyToOne
-	@JoinColumn(name = "visit_id") // Nazwa kolumny klucza obcego musi odpowiadać rzeczywistej kolumnie w bazie danych
+	@JoinColumn(name = "visit_id") //
 	private VisitEntity visit;
 
 	// Gettery i settery
