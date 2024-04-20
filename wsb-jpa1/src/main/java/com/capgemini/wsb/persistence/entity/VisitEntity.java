@@ -1,7 +1,8 @@
 package com.capgemini.wsb.persistence.entity;
 
+import com.capgemini.wsb.persistence.dao.PatientDao;
+
 import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -39,7 +40,7 @@ public class VisitEntity {
 		this.doctor = doctor;
 	}
 
-	public PatientEntity getPatient() {
+	public PatientDao getPatient() {
 		return patient;
 	}
 

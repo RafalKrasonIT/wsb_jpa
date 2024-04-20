@@ -38,7 +38,17 @@ public class PatientEntity {
 	@OneToMany(mappedBy = "patient", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<VisitEntity> visits;
 
-	// Gettery i settery
+	@Column(name = "DATE_OF_REGISTRATION")
+	private LocalDate dateOfRegistration;
+
+	public LocalDate getDateOfRegistration() {
+		return dateOfRegistration;
+	}
+
+	public void setDateOfRegistration(LocalDate dateOfRegistration) {
+		this.dateOfRegistration = dateOfRegistration;
+	}
+
 	public AddressEntity getAddress() {
 		return address;
 	}
